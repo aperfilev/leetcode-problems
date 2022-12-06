@@ -1,13 +1,13 @@
 import math
 
 class Solution:
-
     def isPowerOfThree(self, n: int) -> bool:
-        if n <= 0:
-            return False
+        i = 1
 
-        x = round(math.log(n) / math.log(3), 10)
-        return x == int(x)
+        while i < n:
+            i *= 3
+
+        return i == n
 
 print(Solution().isPowerOfThree(243)) #True
 print(Solution().isPowerOfThree(27)) #True
